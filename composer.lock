@@ -4,8 +4,46 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "14f310105d58ac19f2d8eeb8ada9a772",
-    "packages": [],
+    "content-hash": "92fe99a8c153da8650515936d9b864f9",
+    "packages": [
+        {
+            "name": "eastoriented/php-block",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/eastoriented/php-block.git",
+                "reference": "1c1a862cf17d4041c7a19c90ccd9eaba84ccd421"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/eastoriented/php-block/zipball/1c1a862cf17d4041c7a19c90ccd9eaba84ccd421",
+                "reference": "1c1a862cf17d4041c7a19c90ccd9eaba84ccd421",
+                "shasum": ""
+            },
+            "require-dev": {
+                "atoum/atoum": "^3",
+                "eastoriented/library": "dev-master"
+            },
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "eastoriented\\php\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Frédéric Hardy",
+                    "email": "frederic.hardy@mageekbox.net"
+                }
+            ],
+            "description": "A PHP library to emulate Smalltalk block",
+            "time": "2019-02-04T17:23:31+00:00"
+        }
+    ],
     "packages-dev": [
         {
             "name": "atoum/atoum",
@@ -125,6 +163,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "eastoriented/php-block": 20,
         "eastoriented/library": 20
     },
     "prefer-stable": false,

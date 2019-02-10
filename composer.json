@@ -1,6 +1,19 @@
 {
-    "require-dev": {
-        "eastoriented/library": "dev-master",
-        "atoum/atoum": "^3"
-    }
+	"require-dev": {
+		"eastoriented/library": "dev-master",
+			"atoum/atoum": "^3"
+	},
+	"require": {
+		"eastoriented/php-block": "dev-master"
+	},
+	"autoload": {
+		"psr-4": {
+			"eastoriented\\php\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"eastoriented\\php\\container\\tests\\units\\": "tests/units/src"
+		}
+	}
 }
