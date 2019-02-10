@@ -15,6 +15,11 @@ class fromArray
 		$this->values = $values;
 	}
 
+	function recipientOfValuesInContainerIs(container\values\recipient $recipient) :void
+	{
+		$recipient->valuesInPhpContainerAre(... $this->values);
+	}
+
 	function blockForContainerIteratorIs(container\iterator $iterator, container\iterator\block $block) :void
 	{
 		$iterator->variablesForIteratorBlockAre($block, $this->values);

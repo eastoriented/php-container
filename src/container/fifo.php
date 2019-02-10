@@ -1,24 +1,24 @@
 <?php namespace eastoriented\php\container;
 
-class fifo
+class fifo extends fromArray
 {
-	private
-		$values
-	;
-
-	function __construct(... $values)
-	{
-		$this->values = $values;
-	}
-
 	function blockForIteratorIs(iterator\block $block) :void
 	{
-		(
-			new iterator\fifo
-		)
-			->variablesForIteratorBlockAre(
-				$block,
-				... $this->values
+		$this
+			->recipientOfValuesInContainerIs(
+				new values\recipient\functor(
+					function() use ($block)
+					{
+						(
+							new iterator\fifo
+						)
+							->variablesForIteratorBlockAre(
+								$block,
+								... func_get_args()
+							)
+						;
+					}
+				)
 			)
 		;
 	}

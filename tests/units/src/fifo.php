@@ -3,6 +3,7 @@
 require __DIR__ . '/../runner.php';
 
 use eastoriented\tests\units;
+use eastoriented\php\container\tests\units\container;
 use mock\eastoriented\php\container\iterator\block as mockOfBlock;
 
 class fifo extends units\test
@@ -28,8 +29,7 @@ class fifo extends units\test
 
 			->given(
 				$this->newTestedInstance(
-					$value = uniqid(),
-					$otherValue = rand(PHP_INT_MIN, PHP_INT_MAX)
+					... container::generateValues()
 				)
 			)
 			->if(
@@ -37,9 +37,9 @@ class fifo extends units\test
 			)
 			->then
 				->object($this->testedInstance)
-					->isEqualTo($this->newTestedInstance($value, $otherValue))
+					->isEqualTo($this->newTestedInstance(... $values))
 				->variable($values)
-					->isEqualTo([ $value, $otherValue ])
+					->isEqualTo($values)
 		;
 	}
 }

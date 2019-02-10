@@ -2,16 +2,44 @@
 
 require __DIR__ . '/../../runner.php';
 
-use eastoriented\tests\units;
+use eastoriented\php\container\tests\units\container;
 use mock\eastoriented\php\container\iterator as mockOfIterator;
 use mock\eastoriented\php\container\iterator\block as mockOfBlock;
+use mock\eastoriented\php\container\values\recipient as mockOfValuesRecipient;
 
-class fromArray extends units\test
+class fromArray extends container
 {
-	function testClass()
+	function testRecipientOfValuesInContainerIs()
 	{
-		$this->testedClass
-			->implements('eastoriented\php\container')
+		$this
+			->given(
+				$this->newTestedInstance,
+				$recipient = new mockOfValuesRecipient
+			)
+			->if(
+				$this->testedInstance->recipientOfValuesInContainerIs($recipient)
+			)
+			->then
+				->object($this->testedInstance)
+					->isEqualTo($this->newTestedInstance)
+				->mock($recipient)
+					->receive('valuesInPhpContainerAre')
+						->withArguments()
+							->once
+
+			->given(
+				$this->newTestedInstance(... ($values = self::generateValues()))
+			)
+			->if(
+				$this->testedInstance->recipientOfValuesInContainerIs($recipient)
+			)
+			->then
+				->object($this->testedInstance)
+					->isEqualTo($this->newTestedInstance(... $values))
+				->mock($recipient)
+					->receive('valuesInPhpContainerAre')
+						->withArguments(... $values)
+							->once
 		;
 	}
 
@@ -34,9 +62,7 @@ class fromArray extends units\test
 							->once
 
 			->given(
-				$values = [ rand(PHP_INT_MIN, PHP_INT_MAX), M_PI, uniqid(), new \stdclass, false, true, null, '' ],
-				shuffle($values),
-				$this->newTestedInstance(... $values)
+				$this->newTestedInstance(... ($values = self::generateValues()))
 			)
 			->if(
 				$this->testedInstance->blockForContainerIteratorIs($iterator, $block)
