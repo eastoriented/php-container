@@ -1,7 +1,7 @@
 {
 	"name": "eastoriented/php-container",
 	"description": "A PHP library to iterate over values in container",
-	"type": "project",
+	"type": "library",
 	"license": "BSD-2-Clause",
 	"authors": [
 		{
