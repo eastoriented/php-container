@@ -1,4 +1,14 @@
 {
+	"name": "eastoriented/php-container",
+	"description": "A PHP library to iterate over values in container",
+	"type": "project",
+	"license": "BSD-2-Clause",
+	"authors": [
+		{
+			"name": "Frédéric Hardy",
+			"email": "frederic.hardy@mageekbox.net"
+		}
+	],
 	"require-dev": {
 		"eastoriented/library": "dev-master",
 			"atoum/atoum": "^3"
