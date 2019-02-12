@@ -1,8 +1,17 @@
-<?php namespace eastoriented\php\container;
+<?php namespace eastoriented\php\container\adt;
+
+use eastoriented\php\container\{
+	adt,
+	fromArray,
+	iterator,
+	values
+};
 
 class fifo extends fromArray
+	implements
+		adt
 {
-	function blockForIteratorIs(iterator\block $block) :void
+	function blockForEachValueIs(iterator\block $block) :void
 	{
 		$this
 			->recipientOfValuesInContainerIs(

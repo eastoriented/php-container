@@ -11,19 +11,28 @@ The file `src/iterator/block.php` define the interface `eastoriented\php\contain
 To iterate over a container, you need an iterator and a block.
 
 ```
-use eastoriented\php\container;
+use eastoriented\php\{
+	container,
+	container\iterator,
+	container\iterator\block
+};
 
-(new containerer\functor(function() { echo 'Hello world!'; }))->blockArgumentsAre(); // display 'Hello world!'
-(new block\functor(function($message) { echo $message; }))->blockArgumentsAre('Hello world!'); // display 'Hello world!'
-(new block\functor(function($hello, $world) { echo $hello . ' ' . $world . '!'; }))->blockArgumentsAre('Hello', 'world'); // display 'Hello world!'
-```
+(new container\adt\fifo(1, null, false, true, new \stdclass, uniqid(), rand(PHP_INT_MIN, PHP_INT_MAX), M-PI))
+	->blockForContainerIteratorIs(
+		new block\functor(
+			function($value) { var_dump($value); }
+		)
+	)
+;
 
-The file `src/block/exception.php` contains a class which implements `eastoriented\php\block` to throw exception:
-
-```
-use eastoriented\php\block;
-
-(new block\exception(new \exception))->blockArgumentsAre(); // throw $exception
+(new container\fromArray(1, null, false, true, new \stdclass, uniqid(), rand(PHP_INT_MIN, PHP_INT_MAX), M-PI))
+	->blockForContainerIteratorIs(
+		new iterator\fifo,
+		new block\functor(
+			function($value) { var_dump($value); }
+		)
+	)
+;
 ```
 
 ## Contributing
@@ -54,7 +63,7 @@ To use it, just put it in a text file in (for example) your home and define it a
 
 ### About testing
 
-To run unit tests, just do `make tests/units`.
+To run unit tests, just do `make unit-tests`.
 
 ## Languages and tools
 

@@ -1,6 +1,6 @@
-<?php namespace eastoriented\php\container\tests\units;
+<?php namespace eastoriented\php\container\tests\units\adt;
 
-require __DIR__ . '/../runner.php';
+require __DIR__ . '/../../../runner.php';
 
 use eastoriented\tests\units;
 use eastoriented\php\container\tests\units\container;
@@ -8,7 +8,14 @@ use mock\eastoriented\php\container\iterator\block as mockOfBlock;
 
 class fifo extends units\test
 {
-	function testBlockForIteratorIs()
+	function testClass()
+	{
+		$this->testedClass
+			->implements('eastoriented\php\container\adt')
+		;
+	}
+
+	function testBlockForEachValueIs()
 	{
 		$this
 			->given(
@@ -19,7 +26,7 @@ class fifo extends units\test
 				}
 			)
 			->if(
-				$this->testedInstance->blockForIteratorIs($block)
+				$this->testedInstance->blockForEachValueIs($block)
 			)
 			->then
 				->object($this->testedInstance)
@@ -33,7 +40,7 @@ class fifo extends units\test
 				)
 			)
 			->if(
-				$this->testedInstance->blockForIteratorIs($block)
+				$this->testedInstance->blockForEachValueIs($block)
 			)
 			->then
 				->object($this->testedInstance)
