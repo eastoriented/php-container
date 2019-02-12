@@ -58,7 +58,7 @@ class fromArray extends container
 				->object($this->testedInstance)->isEqualTo($this->newTestedInstance)
 				->mock($iterator)
 					->receive('variablesForIteratorBlockAre')
-						->withArguments($block, [])
+						->withArguments($block, ...[])
 							->once
 
 			->given(
@@ -71,7 +71,7 @@ class fromArray extends container
 				->object($this->testedInstance)->isEqualTo($this->newTestedInstance(... $values))
 				->mock($iterator)
 					->receive('variablesForIteratorBlockAre')
-						->withArguments($block, $values)
+						->withArguments($block, ...$values)
 							->once
 		;
 	}

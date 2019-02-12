@@ -22,6 +22,6 @@ class fromArray
 
 	function blockForContainerIteratorIs(container\iterator $iterator, container\iterator\block $block) :void
 	{
-		$iterator->variablesForIteratorBlockAre($block, $this->values);
+		$iterator->variablesForIteratorBlockAre($block, ...$this->values);
 	}
 }
