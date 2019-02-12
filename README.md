@@ -6,9 +6,10 @@ All public methods in all classes return `void`.
 ## How to use it?
 
 The file `src/container.php` define the interface `eastoriented\php\container`.  
+The file `src/container/adt.php` define the interface `eastoriented\php\container\adt` (Abstract Data Type).  
 The file `src/iterator.php` define the interface `eastoriented\php\container\iterator`.  
 The file `src/iterator/block.php` define the interface `eastoriented\php\container\iterator\block`.  
-To iterate over a container, you need an iterator and a block.
+To iterate over a container, you need an iterator and a block, or you can use an abstract data type.
 
 ```
 use eastoriented\php\{
@@ -17,17 +18,17 @@ use eastoriented\php\{
 	container\iterator\block
 };
 
-(new container\adt\fifo(1, null, false, true, new \stdclass, uniqid(), rand(PHP_INT_MIN, PHP_INT_MAX), M-PI))
+(new container\fromArray(1, null, false, true, new \stdclass, uniqid(), rand(PHP_INT_MIN, PHP_INT_MAX), M-PI))
 	->blockForContainerIteratorIs(
+		new iterator\fifo,
 		new block\functor(
 			function($value) { var_dump($value); }
 		)
 	)
 ;
 
-(new container\fromArray(1, null, false, true, new \stdclass, uniqid(), rand(PHP_INT_MIN, PHP_INT_MAX), M-PI))
-	->blockForContainerIteratorIs(
-		new iterator\fifo,
+(new container\adt\fifo(1, null, false, true, new \stdclass, uniqid(), rand(PHP_INT_MIN, PHP_INT_MAX), M-PI))
+	->blockForEachValueIs(
 		new block\functor(
 			function($value) { var_dump($value); }
 		)
