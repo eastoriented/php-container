@@ -1,4 +1,4 @@
-# eastoriented/php-container
+# eastoriented/php-container [![Build Status](https://travis-ci.org/eastoriented/php-container.svg?branch=master)](https://travis-ci.org/eastoriented/php-container) [![Coverage Status](https://coveralls.io/repos/github/eastoriented/php-container/badge.svg?branch=master)](https://coveralls.io/github/eastoriented/php-container?branch=master)
 
 `eastoriented/php-container` is a east oriented PHP library to iterator over some values.
 All public methods in all classes return `void`.
