@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "92fe99a8c153da8650515936d9b864f9",
+    "content-hash": "1a8ca23d8ec70272ac5551528499840f",
     "packages": [
         {
             "name": "eastoriented/php-block",
@@ -12,19 +12,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/eastoriented/php-block.git",
-                "reference": "1c1a862cf17d4041c7a19c90ccd9eaba84ccd421"
+                "reference": "1a1b7459c7dfef3eb4bf56032f7f3864edaf1d09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/eastoriented/php-block/zipball/1c1a862cf17d4041c7a19c90ccd9eaba84ccd421",
-                "reference": "1c1a862cf17d4041c7a19c90ccd9eaba84ccd421",
+                "url": "https://api.github.com/repos/eastoriented/php-block/zipball/1a1b7459c7dfef3eb4bf56032f7f3864edaf1d09",
+                "reference": "1a1b7459c7dfef3eb4bf56032f7f3864edaf1d09",
                 "shasum": ""
             },
             "require-dev": {
                 "atoum/atoum": "^3",
                 "eastoriented/library": "dev-master"
             },
-            "type": "project",
+            "type": "library",
             "autoload": {
                 "psr-4": {
                     "eastoriented\\php\\": "src/"
@@ -41,7 +41,7 @@
                 }
             ],
             "description": "A PHP library to emulate Smalltalk block",
-            "time": "2019-02-04T17:23:31+00:00"
+            "time": "2019-02-12T15:18:55+00:00"
         }
     ],
     "packages-dev": [
@@ -134,12 +134,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/eastoriented/library.git",
-                "reference": "04b71160cf4a62b5ca47f031ccb8b35fa2838a6d"
+                "reference": "29a1c281c77c20c539e4df5707b8fd33ca81818f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/eastoriented/library/zipball/04b71160cf4a62b5ca47f031ccb8b35fa2838a6d",
-                "reference": "04b71160cf4a62b5ca47f031ccb8b35fa2838a6d",
+                "url": "https://api.github.com/repos/eastoriented/library/zipball/29a1c281c77c20c539e4df5707b8fd33ca81818f",
+                "reference": "29a1c281c77c20c539e4df5707b8fd33ca81818f",
                 "shasum": ""
             },
             "bin": [
@@ -157,7 +157,7 @@
                 }
             ],
             "description": "A blueprint to setup a develoment environment for library with docker",
-            "time": "2019-02-04T14:32:40+00:00"
+            "time": "2019-10-04T10:24:14+00:00"
         }
     ],
     "aliases": [],
