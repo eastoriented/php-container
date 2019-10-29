@@ -3,6 +3,7 @@
 	"description": "A PHP library to iterate over values in container",
 	"type": "library",
 	"license": "BSD-2-Clause",
+	"minimum-stability": "dev",
 	"authors": [
 		{
 			"name": "Frédéric Hardy",
