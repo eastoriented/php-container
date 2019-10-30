@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1a8ca23d8ec70272ac5551528499840f",
+    "content-hash": "92f087050f84846262c10960ec0460e1",
     "packages": [
         {
             "name": "eastoriented/php-block",
@@ -12,13 +12,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/eastoriented/php-block.git",
-                "reference": "1a1b7459c7dfef3eb4bf56032f7f3864edaf1d09"
+                "reference": "a84e4ad24fb9e0870ca9efd973fbb9030b22a558"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/eastoriented/php-block/zipball/1a1b7459c7dfef3eb4bf56032f7f3864edaf1d09",
-                "reference": "1a1b7459c7dfef3eb4bf56032f7f3864edaf1d09",
+                "url": "https://api.github.com/repos/eastoriented/php-block/zipball/a84e4ad24fb9e0870ca9efd973fbb9030b22a558",
+                "reference": "a84e4ad24fb9e0870ca9efd973fbb9030b22a558",
                 "shasum": ""
+            },
+            "require": {
+                "eastoriented/php-container": "dev-master"
             },
             "require-dev": {
                 "atoum/atoum": "^3",
@@ -41,22 +44,22 @@
                 }
             ],
             "description": "A PHP library to emulate Smalltalk block",
-            "time": "2019-02-12T15:18:55+00:00"
+            "time": "2019-10-29T17:18:18+00:00"
         }
     ],
     "packages-dev": [
         {
             "name": "atoum/atoum",
-            "version": "3.3.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/atoum/atoum.git",
-                "reference": "c5279d0ecd4e2d53af6b38815db2cafee8fc46b6"
+                "reference": "b6c93433a7b0b92b54c2bb9b0731d71ddc03b365"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atoum/atoum/zipball/c5279d0ecd4e2d53af6b38815db2cafee8fc46b6",
-                "reference": "c5279d0ecd4e2d53af6b38815db2cafee8fc46b6",
+                "url": "https://api.github.com/repos/atoum/atoum/zipball/b6c93433a7b0b92b54c2bb9b0731d71ddc03b365",
+                "reference": "b6c93433a7b0b92b54c2bb9b0731d71ddc03b365",
                 "shasum": ""
             },
             "require": {
@@ -64,7 +67,7 @@
                 "ext-json": "*",
                 "ext-tokenizer": "*",
                 "ext-xml": "*",
-                "php": "^5.6.0 || ^7.0.0 <7.4.0"
+                "php": "^5.6.0 || ^7.0.0 <7.5.0"
             },
             "replace": {
                 "mageekguy/atoum": "*"
@@ -126,7 +129,7 @@
                 "test",
                 "unit testing"
             ],
-            "time": "2018-03-15T22:46:39+00:00"
+            "time": "2019-10-04T19:45:12+00:00"
         },
         {
             "name": "eastoriented/library",
@@ -161,7 +164,7 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
         "eastoriented/php-block": 20,
         "eastoriented/library": 20
