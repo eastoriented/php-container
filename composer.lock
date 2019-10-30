@@ -12,16 +12,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/eastoriented/php-block.git",
-                "reference": "a84e4ad24fb9e0870ca9efd973fbb9030b22a558"
+                "reference": "f5ca7fbfc4d233f4bd4eaf484cbfe5d2be6bd5f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/eastoriented/php-block/zipball/a84e4ad24fb9e0870ca9efd973fbb9030b22a558",
-                "reference": "a84e4ad24fb9e0870ca9efd973fbb9030b22a558",
+                "url": "https://api.github.com/repos/eastoriented/php-block/zipball/f5ca7fbfc4d233f4bd4eaf484cbfe5d2be6bd5f6",
+                "reference": "f5ca7fbfc4d233f4bd4eaf484cbfe5d2be6bd5f6",
                 "shasum": ""
-            },
-            "require": {
-                "eastoriented/php-container": "dev-master"
             },
             "require-dev": {
                 "atoum/atoum": "^3",
@@ -44,7 +41,7 @@
                 }
             ],
             "description": "A PHP library to emulate Smalltalk block",
-            "time": "2019-10-29T17:18:18+00:00"
+            "time": "2019-10-30T09:41:32+00:00"
         }
     ],
     "packages-dev": [
